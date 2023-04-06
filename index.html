@@ -127,7 +127,10 @@ appearance: none;
       /* input:-ms-input-placeholder { color: #fff !important; }
       input::-webkit-input-placeholder { color: #fff; }
       input::-moz-placeholder { color: #fff; } */
-      input::-webkit-appearance: none;
+      input::-webkit-padding-bottom: 0;
+	input::appearance: none;
+	input::-webkit-appearance: none;
+	input::-webkit-border-radius: 0;
       input:focus {outline: none;}
       button {display: block; text-transform: none; border-style: none; padding: 0; background-color: transparent;}
 
