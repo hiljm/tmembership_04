@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html;charset=euc-kr">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="format-detection" content="telephone=no">
    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
    <meta property="og:image" content="http://www.aia.co.kr/content/dam/kr/ko/images/site/og/aia-life.png">
-   <title> AIA생명 OX 퀴즈 이벤트</title>
-
+   <title> AIA생명</title>
+   
    <style>
       /* font-family: 'Noto Sans KR',Sans-serif; */
       /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
@@ -93,6 +93,7 @@
          src: url('./font/Roboto-Regular.woff') format('woff');
       }
 
+
       @-webkit-keyframes fadeInUp {
          0% {opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px);}
          100% {opacity: 1; -webkit-transform: translateY(0); transform: translateY(0);}
@@ -104,6 +105,8 @@
       .animate-plus {opacity: 0;}
       .fadeInUp {-webkit-animation-name: fadeInUp; animation-name: fadeInUp;}
       .animated {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+
+
 
 
       * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR',"맑은 고딕",Sans-serif; font-weight: 300; color: #000;}
@@ -130,15 +133,11 @@
       #AIA_wrap .contents {width: 100%; max-width: 720px; margin: 0 auto;}
       #AIA_wrap .contents .sc1 {margin-bottom: 60px; width: 100%;}
       #AIA_wrap .contents .sc1 .wrap {background-color: #efe4e4; padding-top: 100px; position: relative; border-radius: 0 0 50px 50px; text-align: center;}
-      
-	  #AIA_wrap .contents .sc1 .wrap .subtitle {display: inline-block; font-size: 35px; text-align: center; padding: 15px 30px; background-color: #3e21cf; border-radius: 50px; font-family: 'Roboto', sans-serif; color: #fff; font-weight: 300; margin-bottom: 30px;}
+      #AIA_wrap .contents .sc1 .wrap .subtitle {display: inline-block; font-size: 35px; text-align: center; padding: 15px 30px; background-color: #3e21cf; border-radius: 50px; font-family: 'Roboto', sans-serif; color: #fff; font-weight: 300; margin-bottom: 30px;}
       #AIA_wrap .contents .sc1 .wrap .subtitle b {font-weight: 400; color: #fff;}
-	  
-	  
       #AIA_wrap .contents .sc1 .wrap .title {font-size: 73px; line-height: 1.3; text-align: center; font-weight: 500; padding-bottom: 40px; animation-delay: 0.3s;}
-      #AIA_wrap .contents .sc1 .wrap .title b {font-size: 42px; font-weight: 400;}
-	  
-	  #AIA_wrap .contents .sc1 .wrap .title span {color: #d01345; font-weight: 600;}
+	  		#AIA_wrap .contents .sc1 .wrap .title b {font-size: 42px; font-weight: 400;}	
+      #AIA_wrap .contents .sc1 .wrap .title span {color: #d01345; font-weight: 600;}
       #AIA_wrap .contents .sc1 .wrap .img {text-align: center; animation-delay: 0.6s;}
       #AIA_wrap .contents .sc1 .wrap .bg {position: absolute; left: 0; bottom: 0; z-index: 1; margin-bottom: -20px;}
       #AIA_wrap .contents .sc1 .wrap .bg img {width: 100%; display: block;}
@@ -191,14 +190,18 @@
       #AIA_wrap .db_box ul li.confirm .check img {width: auto; height: 100%;}
 
       #AIA_wrap .db_box_agree {}
-      #AIA_wrap .db_box_agree .agree_check {display: flex; align-items: center; padding-bottom: 20px; max-width: 620px; margin: 0 auto;}
-      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] {display: block; width: 1px; height: 1px;}
-      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label {position: relative; display: flex; align-items: center; font-size: 28px; font-weight: 400; color: #5f5f5f;}
-      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label::before {display: block; position: relative; content: ''; width: 25px; height: 25px; border: 1px solid #6a6a6a; border-radius: 50px; margin-right: 10px; background-color: #fff; margin-top: 3px;}
+      #AIA_wrap .db_box_agree .agree_check {display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 20px; max-width: 620px; margin: 0 auto;}
+      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] {display: none; width: 1px; height: 1px;}
+      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label {position: relative; display: flex; align-items: flex-start; font-size: 26px; font-weight: 400; color: #5f5f5f;}
+      #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label::before {display: block; position: relative; content: ''; min-width: 25px; height: 25px; border: 1px solid #6a6a6a; border-radius: 50px; margin-right: 10px; background-color: #fff; margin-top: 3px;}
       #AIA_wrap .db_box_agree .agree_check input[type=checkbox]:checked + label::before {background-image: url('./images/20230314_aia_form_checked.png'); background-repeat: no-repeat; background-position: center; background-size: contain;}
       
-      #AIA_wrap .db_box_agree .detail {overflow-x: hidden; overflow-y: auto; border: 1px solid #adadad; border-radius: 10px; height: 420px; max-width: 620px; margin: 0 auto 20px;}
+      #AIA_wrap .db_box_agree .detail {display: none; overflow-x: hidden; overflow-y: auto; border: 1px solid #adadad; border-radius: 10px; height: 420px; max-width: 620px; margin: 0 auto 20px;}
       #AIA_wrap .db_box_agree .detail img {width: 100%;}
+
+      #AIA_wrap .db_box_agree .agree_check .detailBtn01,
+      #AIA_wrap .db_box_agree .agree_check .detailBtn02
+      {display: inline-block; font-size: 24px; min-width: 136px; cursor: pointer;margin-top: 3px;}
 
       #AIA_wrap .db_box_btn {text-align: center;}
 
@@ -253,10 +256,9 @@
          #AIA_wrap .contents .sc1 {margin-bottom: 14vw;}
          #AIA_wrap .contents .sc1 .wrap {padding-top: 14.5vw; border-radius: 0 0 10vw 10vw;}
          #AIA_wrap .contents .sc1 .wrap .subtitle {font-size: 5vw; padding: 2.2vw 4.3vw; border-radius: 10vw; margin-bottom: 5vw;}
-		 
          #AIA_wrap .contents .sc1 .wrap .title {font-size: 10.5vw; padding-bottom: 6.5vw;}
-		 #AIA_wrap .contents .sc1 .wrap .title b {font-size: 6vw; padding-bottom: 6.5vw;}
-		 
+		 			#AIA_wrap .contents .sc1 .wrap .title b {font-size: 6vw; padding-bottom: 6.5vw;}	
+		
          #AIA_wrap .contents .sc1 .wrap .img img {width: 65.14%;}
          #AIA_wrap .contents .sc1 .wrap .bg {margin-bottom: -3vw;}
          #AIA_wrap .contents .sc1 .wrap .gift {right: 7vw; width: 40.69%;}
@@ -293,10 +295,15 @@
          #AIA_wrap .db_box ul li.confirm input {max-width: calc(100% - 12vw);}
 
          #AIA_wrap .db_box_agree .agree_check {max-width: 100%; padding-bottom: 3vw;}
-         #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label {font-size: 4vw;}
-         #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label::before {width: 3.8vw; height: 3.8vw; border-radius: 10vw; margin-right: 1vw; margin-top: 0.3vw;}
+         #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label {font-size: 4vw;max-width:280px;}
+         #AIA_wrap .db_box_agree .agree_check input[type=checkbox] + label::before 
+		 {border-radius: 10vw; margin-right: 1vw; margin-top: 0.3vw;min-width:20px;height:20px;}
 
          #AIA_wrap .db_box_agree .detail {max-width: 100%; height: 70vw; margin: 0 auto 4vw;}
+
+         #AIA_wrap .db_box_agree .agree_check .detailBtn01,
+         #AIA_wrap .db_box_agree .agree_check .detailBtn02 {font-size: 3.5vw; min-width: 13vw; margin-top: 0.5vw;}
+
 
          #AIA_wrap .db_box_btn a img {width: 100%;}
 
@@ -325,7 +332,7 @@
          #AIA_wrap .contents .sc3 .wrap .howto >.img img {width: 100%;}
 
 
-         #AIA_wrap .contents .footer .inner img {width:100%;}
+         #AIA_wrap .contents .footer .inner img {width:100%;}		
          #AIA_wrap .contents .footer .inner b {font-size: 4vw; padding-bottom: 5vw;}
          #AIA_wrap .contents .footer .inner p {font-size: 3.5vw; padding-bottom: 4.5vw;}
 
@@ -340,23 +347,24 @@
          #AIA_wrap .popup .wrap p.small {font-size: 3.5vw;}
 
       }
-   </style>
+    </style>
+
 </head>
+
 <body>
    <div id="AIA_wrap">
 		<div class="contents">
 			<div class="sc1">
 				<div class="wrap">
-					<h3 class="subtitle animate-plus" data-animations="fadeInUp" data-animation-when-visible="true"><b>T 멤버십</b> 고객님을 위한 <b>단독 이벤트</b></h3>
-					
+					<h3 class="subtitle animate-plus" data-animations="fadeInUp" data-animation-when-visible="true"><b>T 멤버십</b> 고객님을 위한 <b>단독 이벤트</b></h3>	
 					<h2 class="title animate-plus" data-animations="fadeInUp" data-animation-when-visible="true">
-					<b>(무)AIA Vitality 든든 튼튼 암보험(갱)</b><br />
-						퀴즈 정답을 맞힌<br /> 모든 고객님께<br />
-						<span>신세계상품권 증정</span>
+					<b>(무)AIA Vitality 든든 튼튼 암보험(갱)</b><br />		
+						퀴즈 정답을 맞힌<br /> 모든 고객님께<br />		
+						<span>신세계상품권 증정</span>		
 					</h2>
 					<div class="img animate-plus" data-animations="fadeInUp" data-animation-when-visible="true"><img src="./images/20230314_aia_sc1_img01.png" alt=""></div>
 					<div class="bg"><img src="./images/20230314_aia_sc1_bg.png" alt=""></div>
-					<div class="gift animate-plus"  data-animations="fadeInUp" data-animation-when-visible="true"><img src="./images/20230314_aia_sc1_img02.png" alt=""></div>
+					<div class="gift"><img src="./images/20230314_aia_sc1_img02.png" alt=""></div>
 				</div>
 			</div>
 	
@@ -366,7 +374,7 @@
 						<div class="quiz on">
 							<div class="num">문제 1</div>
 							<div class="question">
-								(무)AIA Vitality 든든 튼튼 암보험(갱)은<br />
+								(무)AIA Vitality 든든 튼튼 암보험(갱)은<br />		
 								건강 관리하면 보험료가 할인된다.
 							</div>
 							<div class="btnWrap">
@@ -377,8 +385,8 @@
 						<div class="quiz">
 							<div class="num">문제 2</div>
 							<div class="question">
-								(무)AIA Vitality 든든 튼튼 암보험(갱)은<br />
-								건강 관리하면 <br />매주 보상이 제공된다. 
+								(무)AIA Vitality 든든 튼튼 암보험(갱)은<br />		
+								건강 관리하면 <br />매주 보상이 제공된다. 		
 							</div>
 							<div class="btnWrap">
 								<a href="javascript:void(0)" onclick="return false" class="correct">O</a>
@@ -421,10 +429,19 @@
 							<div class="db_box_agree">
 								<div class="agree_check">
 									<input type="checkbox" id="check01" name="">
-									<label for="check01">개인정보 이용 동의(필수)</label>
+									<label for="check01">[필수]마케팅을 위한 개인정보 수집·이용 동의</label>
+                                    <button class="detailBtn01">[자세히보기]</button>
 								</div>
-								<div class="detail">
-									<img src="./images/20230314_popup_agree.png" alt="">
+                                <div class="detail agree01">
+									<img src="./images/20230314_popup_agree01.png" alt="">
+								</div>
+                                <div class="agree_check">
+									<input type="checkbox" id="check02" name="">
+									<label for="check02">[필수]이벤트 진행을 위한 개인정보 수집·이용 동의 및 처리 위탁 안내</label>
+                                    <button class="detailBtn02">[자세히보기]</button>
+								</div>
+								<div class="detail agree02">
+									<img src="./images/20230314_popup_agree02.png" alt="">
 								</div>
 							</div>
 	
@@ -442,9 +459,9 @@
 			<div class="sc3">
 				<div class="wrap">
 					<div class="hint">
-						<span>힌트</span>
+						<span>힌트</span>		
 						<div class="box">
-							<br /><p>AIA생명 홈페이지에서 힌트를 찾아보세요.</p>
+							<br /><p>AIA생명 홈페이지에서 힌트를 찾아보세요.</p>		
 							<a href="https://dm.vitality.aia.co.kr/event/aia_vitalityDirect_calculation_09.jsp" target="_blank">정답 찾기</a>
 						</div>
 					</div>
@@ -468,20 +485,19 @@
 								<img src="./images/20230314_aia_sc3_img03.png" alt="">
 								<b>STEP 3</b>
 								<p>
-									동의 시<br />
+									동의 시<br />		
 									자동 응모 완료
 								</p>
 							</span>
 						</div>
 						<div class="tag">기간</div>
-						<p>2023년 4월 7일(금)~4월 20일(목)</p>
+						<p>2023년 4월 7일(금)~4월 20일(목)</p>		
 						<div class="tag">경품 발송일</div>
 						<p>2023년 5월 12일(금)</p>
 						<div class="tag">경품</div>
 						<p>
-							<span>OX 퀴즈 참여하고 정답을 맞힌 모든 고객님께</span>
-							신세계상품권 5천 원권 증정<br />
-							
+							<span>OX 퀴즈 참여하고 정답을 맞힌 모든 고객님께</span>		
+							신세계상품권 5천 원권 증정<br />		
 						</p>
 						<div class="img"><img src="./images/20230314_aia_sc3_img04.png" alt=""></div>
 					</div>
@@ -493,7 +509,7 @@
 			<!-- footer -->
 			<div class="footer">
 				<div class="inner">
-					<img src="./images/20230314_aia_sc4_img01.png" alt="">
+					<img src="./images/20230314_aia_sc4_img01.png" alt="">	
 				</div>
 			</div>
 	
@@ -503,16 +519,15 @@
 			<div class="popup wrongPop" data-receive="popup_event">
 				<div class="wrap">
 					<div class="top">
-						<a class="logo"><img src="./images/20230314_aia_popup_logo.png" alt=""></a>
+						<a href="" class="logo"><img src="./images/20230314_aia_popup_logo.png" alt=""></a>
 						<button class="close popup_close">X</button>
 					</div>
 					<b>오답입니다!</b>
-					<p>힌트를 다시 한번 확인해 보세요.</p>
+					<p>힌트를 다시 한번 확인해 보세요.</p>		
 					<button class="popup_close"><img src="./images/20230314_aia_popup_btn01.png" alt=""></button>
 				</div>
 			</div>
-			
-			
+	
 	
 			<!-- popup (done) -->
 			<div class="popup eventPop" data-receive="popup_event">
@@ -521,30 +536,44 @@
 						<a href="" class="logo"><img src="./images/20230314_aia_popup_logo.png" alt=""></a>
 						<button class="close popup_close">X</button>
 					</div>
-					<b>이벤트에 참여해 <br />주셔서 감사합니다. </b>
-					<p class="small">참여하신 고객님께 보험 상담 전화를 드릴 수 있습니다. </p>
+					<b>이벤트에 참여해 <br />주셔서 감사합니다. </b>		
+					<p class="small">참여하신 고객님께 보험 상담 전화를 드릴 수 있습니다. </p>		
 					<a href="https://dm.vitality.aia.co.kr/event/aia_vitalityDirect_calculation_09.jsp" target="_blank"><img src="./images/20230314_aia_popup_btn02.png" alt=""></a>
 				</div>
 			</div>
 		</div>
 	</div>
-		
-		
-	<script src="./js/wow.js"></script>
+
+   <script src="./js/wow.js"></script>
 	<script src="./js/jquery-2.1.1.min.js"></script>
 	<script>
 
 
-		(function ($) {
+(function ($) {
 			var AIA_UI = {
+            agree: function() {
+                $(".detailBtn01").on({
+						"click": function (e) {
+							$(".agree01").slideToggle();
+						}
+					});
+                $(".detailBtn02").on({
+						"click": function (e) {
+							$(".agree02").slideToggle();
+						}
+					});
+
+                },
+
+
 				popup: function () {
-               $(".wrongPopBtn").on({
+                $(".wrongPopBtn").on({
 						"click": function (e) {
 							$(".popup.wrongPop").addClass('on');
 			            $(".popup.eventPop").removeClass('on');
 						}
 					});
-               $(".eventPopBtn").on({
+                $(".eventPopBtn").on({
 						"click": function (e) {
 							$(".popup.eventPop").addClass('on');
 			            $(".popup.wrongPop").removeClass('on');
@@ -576,7 +605,8 @@
 
             init: function() {
                this.popup(),
-               this.quiz()
+               this.quiz(),
+               this.agree()
             }
 
 			};
@@ -600,5 +630,12 @@
 
 
 	</script>
-	</body>
+
+   <div id="_layerTracking" style="display:none;position:absolute;">
+   <%@ include file="/common/front/tracking/webLog_common_body.jsp"%>
+   <iframe id="_trck" title="빈프레임" name="_trck" src="" width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" leftmargin="no" topmargin="no" ></iframe>
+   </div>
+    
+</body>
+
 </html>
